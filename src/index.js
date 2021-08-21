@@ -7,10 +7,10 @@ store.dispatch({
   }
 });
 
-// store.dispatch({
-//   type: 'DELETE_BUG',
-//   payload: {
-//     id:1
-//   }
-// });
+store.dispatch({
+  type: 'DELETE_BUG',
+  payload: {
+    id:1
+  }
+});
 console.log(store.getState());
