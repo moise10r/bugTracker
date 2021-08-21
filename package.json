@@ -1,14 +1,14 @@
 {
-  "name": "To_Do_A_List",
+  "name": "Bug Tracker",
   "version": "1.0.0",
   "description": "",
   "private": "true",
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open",
-    "start:Dev":"webpack serve --mode development --env development --hot --port 3000",
+    "start:Dev": "webpack serve --mode development --env development --hot --port 3000",
     "server": "node server.js",
-    "devstart":"nodemon server.js"
+    "devstart": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,8 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "redux": "^4.1.1"
   }
 }
