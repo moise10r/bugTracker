@@ -1,21 +1,9 @@
 import store from "./redux/store";
-
+import { bugAdded, bugRemoved } from './redux/actions';
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState());
 });
 
-store.dispatch({
-  type: 'ADD_BUG',
-  payload: {
-    description: 'Bug 1'
-  }
-});
-
+store.dispatch(bugAdded('Bug 1'));
+store.dispatch(bugRemoved(1));
 unsubscribe();
-
-store.dispatch({
-  type: 'DELETE_BUG',
-  payload: {
-    id:1
-  }
-});
