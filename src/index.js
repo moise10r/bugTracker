@@ -1,5 +1,9 @@
 import store from "./redux/store";
 
+const unsubscribe = store.subscribe(() => {
+  console.log(store.getState());
+});
+
 store.dispatch({
   type: 'ADD_BUG',
   payload: {
@@ -7,10 +11,11 @@ store.dispatch({
   }
 });
 
+unsubscribe();
+
 store.dispatch({
   type: 'DELETE_BUG',
   payload: {
     id:1
   }
 });
-console.log(store.getState());
